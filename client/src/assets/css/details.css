@@ -1,0 +1,123 @@
+.item-photo img{
+    width: 100%;
+}
+
+.item-desc h4{
+    font-family: Bold;
+}
+
+.item-desc p{
+    font-family: Regular;
+    margin-top: 20px;
+}
+
+.item-desc ul{
+    margin-top: 20px;
+}
+
+.item-desc ul li{
+    margin-bottom: 8px;
+    font-family: Regular;
+}
+
+.item-desc li span{
+    color: #ffb6b6;
+    font-family: Bold;
+}
+
+.item-price {
+    background-color: #ffb6b6;
+    color: #fff;
+    padding: 5px 11px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.add-to-cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-to-cart button{
+    width: 47%;
+    background-color: transparent;
+    height: 50px;
+    margin-top: 40px;
+    transition: .5s;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.add-to-cart button:nth-child(2) {
+    border: 2px solid #ffb6b6;
+    color: #ffb6b6  ;
+}
+
+
+.add-to-cart button:nth-child(1 ) {
+    border: 2px solid green;
+    color: green  ;
+}
+
+.add-to-cart button:nth-child(2)::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    transition: .5s;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffb6b6;
+}
+
+.add-to-cart button:nth-child(1)::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    transition: .5s;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: green;
+}
+
+.add-to-cart button:hover::before{
+    width: 100%;
+}
+
+.add-to-cart button:hover{
+    color: #fff;
+}
+
+.familiars h3{
+    font-family: Bold;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.view-count {
+    font-family: Regular;
+    color: #333;
+    font-size: 14px;
+}
+
+.item-photo {
+    position: relative;
+}
+
+
+.item-photo span{
+    position: absolute;
+    font-size: 14px;
+    background: orange;
+    color: #fff;
+    padding: 0px 4px;
+    font-family: 'Regular';
+    border-radius: 3px;
+    top: 25px;
+    left: 25px;
+}

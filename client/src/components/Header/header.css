@@ -1,0 +1,87 @@
+header .top{
+    padding: 3px 0;
+    background-color: #f7f7f7;
+}
+
+header .top p{
+    color: #333;
+    font-size: 14px;
+    font-family: Regular;
+}
+
+.top button {
+    font-size: 14px;
+    font-family: Regular;
+}
+
+.mid{
+    padding: 20px 0;
+}
+
+.logo a{
+    /* color: #097969; */
+    color: #ffb6b6;
+    font-family: Bold;
+    font-size: 40px;
+}
+
+.search {
+    justify-content: flex-end;
+}
+
+.search input{
+    width: 80%;
+    border: 2px solid #e7e7e7;
+    border-right: none;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: Regular;
+}
+
+.search button{
+    height: 45px;
+    border: 1px solid #ffb6b6;
+    background-color: #ffb6b6;
+    color: #fff;
+    width: 45px;
+}
+
+.basket {
+    text-align: right;
+}
+
+.mid .basket svg{
+    font-size: 30px;
+    color: #ffb6b6;
+}
+
+
+.basket a{
+    position: relative;
+}
+
+.basket a span{
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    color: #fff;
+    background-color: #ffb6b6;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-family: Bold;
+    border-radius: 50%;
+}
+
+@media (max-width:576px) {
+    .logo {
+        text-align: center !important;
+    }
+    .search {
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .basket {
+        text-align: center;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,30 @@
+.category-list {
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+}
+
+.category-list ul{
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.category-list ul::-webkit-scrollbar{
+    width: 4px;
+}
+
+.category-list ul::-webkit-scrollbar-thumb{
+    background-color: #ffb6b6;
+}
+
+.category-list li{
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.category-list li a{
+    color: #333;
+    font-family: Regular;
+    font-size: 14px;
+}
+
