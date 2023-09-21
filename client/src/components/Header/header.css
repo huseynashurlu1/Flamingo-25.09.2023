@@ -15,7 +15,9 @@ header .top p{
 }
 
 .mid{
-    padding: 20px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 20px;
 }
 
 .logo a{

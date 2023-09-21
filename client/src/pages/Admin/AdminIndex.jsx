@@ -23,28 +23,22 @@ const AdminIndex = () => {
       <div className="container">
         {
           data && <div className="row my-5 st-all">
-          <div className="col-lg-3">
+          <div className="col-lg-4">
             <div style={{backgroundColor: '#3C4B64'}} className="st-box card">
               <h4>Kateqoriya</h4>
               <p>{data.cat_count}</p>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-4">
             <div style={{backgroundColor: '#2A86D4'}} className="st-box">
               <h4>Məhsul</h4>
               <p>{data.pr_count}</p>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-4">
             <div style={{backgroundColor: '#F79C0D'}} className="st-box">
               <h4>Sifariş</h4>
               <p>{data.order_count}</p>
-            </div>
-          </div>
-          <div className="col-lg-3">
-            <div style={{backgroundColor: '#DB3C3C'}} className="st-box">
-              <h4>Giriş sayı</h4>
-              <p>{data.countt}</p>
             </div>
           </div>
           </div>

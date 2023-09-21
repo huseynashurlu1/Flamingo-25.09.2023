@@ -21,6 +21,7 @@ const Orders = () => {
   const DeleteHandler = async (id) => {
     try {
         const response = await axios.delete(`http://localhost:5000/api/order/${id}`)
+        setData(prevData => prevData.filter(item => item._id !== id));
         toast.error('Sifariş silindi', {
             position: "bottom-right",
             autoClose: 2000,

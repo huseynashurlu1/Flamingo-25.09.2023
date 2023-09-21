@@ -22,6 +22,7 @@ const Brands = () => {
     const DeleteHandler = async (id) => {
         try {
             const response = await axios.delete(`http://localhost:5000/api/brand/${id}`)
+            setData(prevData => prevData.filter(item => item._id !== id));
             toast.error('Brend silindi', {
                 position: "bottom-right",
                 autoClose: 2000,

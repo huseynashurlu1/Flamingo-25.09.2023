@@ -22,9 +22,9 @@ const Products = () => {
   }, [])
 
   const DeleteHandler = async (id) => {
-    console.log(id);
     try {
         const response = await axios.delete(`http://localhost:5000/api/product/${id}`)
+        setData(prevData => prevData.filter(item => item._id !== id));
         toast.error('Məhsul silindi', {
             position: "bottom-right",
             autoClose: 2000,

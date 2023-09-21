@@ -24,6 +24,7 @@ const Categories = () => {
     const DeleteHandler = async (id) => {
       try {
           const response = await axios.delete(`http://localhost:5000/api/category/${id}`)
+          setData(prevData => prevData.filter(item => item._id !== id));
           toast.error('Kateqoriya silindi', {
               position: "bottom-right",
               autoClose: 2000,

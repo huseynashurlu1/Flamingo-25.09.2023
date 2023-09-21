@@ -58,12 +58,12 @@ const Navbar = (props) => {
                             <Link to='/'>Flamingo</Link>
                         </div>
                     </div>
-                    <div className="col-lg-7 col-12">
+                    {/* <div className="col-lg-7 col-12">
                         <div className="search d-flex">
                             <input type="text" placeholder='Məsələn, qazan'/>
                             <button><BsSearch /></button>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="col-lg-3 col-12 basket">
                         <Link to='/cart'>
                             <HiOutlineShoppingCart />
