@@ -17,7 +17,7 @@ const ModalBox = (props) => {
 
     const orderHandler = async () => {
         try {
-            await axios.post('http://localhost:5000/api/order/add', order)
+            await axios.post('http://207.154.192.155:5000/api/order/add', order)
             toast.success('Sifariş göndərildi', {
                 position: "bottom-right",
                 autoClose: 2000,
