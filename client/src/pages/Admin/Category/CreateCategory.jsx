@@ -14,7 +14,7 @@ const CreateCategory = () => {
     const handleSubmit = async () => {
         console.log(item);
         try {
-            const response = await axios.post('http://localhost:5000/api/category/add', item)
+            const response = await axios.post('http://207.154.192.155:5000/api/category/add', item)
             toast.success('Kateqoriya əlavə olundu', {
                             position: "bottom-right",
                             autoClose: 2000,
