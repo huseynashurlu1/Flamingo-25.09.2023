@@ -29,18 +29,18 @@ const DetailPage = () => {
     useEffect(() => {
         const getItem = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/product/all-products/${id}`)
+                const res = await axios.get(`http://207.154.192.155:5000/api/product/all-products/${id}`)
                 setData(res.data)
                 getSameItems(res.data.categoryId)
 
-                await axios.put(`http://localhost:5000/api/product/${id}/increase-view`);    
+                await axios.put(`http://207.154.192.155:5000/api/product/${id}/increase-view`);    
             } catch (error) {
                 console.log(error)
             }
         }
 
         const getSameItems = async (id) => {
-            await axios.get(`http://localhost:5000/api/product/all-products/category/${id}`)
+            await axios.get(`http://207.154.192.155:5000/api/product/all-products/category/${id}`)
             .then(res => {
                 setSameItems(res.data)
             })
@@ -77,7 +77,7 @@ const DetailPage = () => {
                             {
                                 data.discount && <span>Endirimli</span>
                             }
-                            <img src={`http://localhost:5000/uploads/${data.image}`} alt="" />
+                            <img src={`http://207.154.192.155:5000/uploads/${data.image}`} alt="" />
                         </div>
                     </div>
                     <div className="col-lg-6">
@@ -119,7 +119,7 @@ const DetailPage = () => {
                                             <div className="item-box">
                                             <div className="item-image">
                                                 {item.discount && <span>Endirimli</span>}
-                                                <img className='img-fluid' src={`http://localhost:5000/uploads/${item.image}`} alt="" />
+                                                <img className='img-fluid' src={`http://207.154.192.155:5000/uploads/${item.image}`} alt="" />
                                             </div>
                                             <div className="item-content">
                                                 <h5>{item.name}</h5>
