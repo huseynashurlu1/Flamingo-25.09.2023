@@ -13,7 +13,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const getItems = async () => {
-      await axios.get('http://localhost:5000/api/product/all-products')
+      await axios.get('http://207.154.192.155:5000/api/product/all-products')
       .then(res => {
         setData(res.data)
       })
