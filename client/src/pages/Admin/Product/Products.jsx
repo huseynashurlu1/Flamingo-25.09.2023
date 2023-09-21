@@ -13,7 +13,7 @@ const Products = () => {
 
   useEffect(() => {
     const getItems = async () => {
-      await axios.get(`http://localhost:5000/api/product/all-products`)
+      await axios.get(`http://207.154.192.155:5000/api/product/all-products`)
       .then(res => setData(res.data))
       .catch(err => console.log(err))
     }
@@ -23,7 +23,7 @@ const Products = () => {
 
   const DeleteHandler = async (id) => {
     try {
-        const response = await axios.delete(`http://localhost:5000/api/product/${id}`)
+        const response = await axios.delete(`http://207.154.192.155:5000/api/product/${id}`)
         setData(prevData => prevData.filter(item => item._id !== id));
         toast.error('Məhsul silindi', {
             position: "bottom-right",
@@ -68,7 +68,7 @@ const Products = () => {
                             <tr style={{verticalAlign: "baseline"}} key={item._id}>
                                             <td style={{width: "30%"}}>{item._id}</td>
                                             <td style={{width:"30%"}}>
-                                                <img style={{width:"30%"}} src={`http://localhost:5000/uploads/${item.image}`} alt="" />
+                                                <img style={{width:"30%"}} src={`http://207.154.192.155:5000/uploads/${item.image}`} alt="" />
                                             </td>
                                             <td style={{width: "30%"}}>{item.name}</td>
                                             <td style={{width: "10%"}}>{item.price} AZN</td>
