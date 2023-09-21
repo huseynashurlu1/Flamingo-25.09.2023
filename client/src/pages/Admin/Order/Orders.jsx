@@ -9,7 +9,7 @@ const Orders = () => {
 
   useEffect(() => {
     const getItems = async () => {
-      await axios.get(`http://localhost:5000/api/order/all-orders`)
+      await axios.get(`http://207.154.192.155:5000/api/order/all-orders`)
       .then(res => setData(res.data))
       .catch(err => console.log(err))
     }
@@ -20,7 +20,7 @@ const Orders = () => {
 
   const DeleteHandler = async (id) => {
     try {
-        const response = await axios.delete(`http://localhost:5000/api/order/${id}`)
+        const response = await axios.delete(`http://207.154.192.155:5000/api/order/${id}`)
         setData(prevData => prevData.filter(item => item._id !== id));
         toast.error('Sifariş silindi', {
             position: "bottom-right",
