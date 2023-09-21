@@ -7,7 +7,7 @@ const AdminIndex = () => {
 
   useEffect(() => {
     const getDatas = async () => {
-      await axios.get('http://localhost:5000/api/statistics/all')
+      await axios.get('http://207.154.192.155:5000/api/statistics/all')
       .then(res =>{
         setData(res.data)
         console.log(res.data);
