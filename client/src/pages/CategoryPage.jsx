@@ -16,7 +16,7 @@ const CategoryPage = () => {
 
   useEffect(() => {
     const getItems = async () => {
-      await axios.get(`http://localhost:5000/api/product/all-products/category/${id}`)
+      await axios.get(`http://207.154.192.155:5000/api/product/all-products/category/${id}`)
       .then(res => {
         setData(res.data)
         const all_brands = [];
