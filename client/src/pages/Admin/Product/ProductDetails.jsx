@@ -13,7 +13,7 @@ const ProductDetails = () => {
   useEffect(() => {
     const getItem = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/product/all-products/${id}`);
+        const response = await axios.get(`http://207.154.192.155:5000/api/product/all-products/${id}`);
         setData(response.data);
         setUpdatedData(response.data); // Başlangıçta verileri güncellenmiş verilere ayarla
       } catch (error) {
@@ -39,7 +39,7 @@ const ProductDetails = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:5000/api/product/${id}`, updatedData);
+      await axios.put(`http://207.154.192.155:5000/api/product/${id}`, updatedData);
     } catch (error) {
       console.error(error);
     }
