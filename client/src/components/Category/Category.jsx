@@ -8,7 +8,7 @@ const Category = () => {
 
     useEffect(() => {
         const getDatas = async () => {
-            axios.get('http://localhost:5000/api/category/all-categories')
+            axios.get('http://207.154.192.155:5000/api/category/all-categories')
             .then(res => setData(res.data.categories))
             .catch(err => console.log(err))
         }
