@@ -13,7 +13,7 @@ const Categories = () => {
 
     useEffect(() => {
       const getItems = async () => {
-        await axios.get(`http://localhost:5000/api/category/all-categories`)
+        await axios.get(`http://207.154.192.155:5000/api/category/all-categories`)
         .then(res => setData(res.data.categories))
         .catch(err => console.log(err))
       }
@@ -23,7 +23,7 @@ const Categories = () => {
   
     const DeleteHandler = async (id) => {
       try {
-          const response = await axios.delete(`http://localhost:5000/api/category/${id}`)
+          const response = await axios.delete(`http://207.154.192.155:5000/api/category/${id}`)
           setData(prevData => prevData.filter(item => item._id !== id));
           toast.error('Kateqoriya silindi', {
               position: "bottom-right",
