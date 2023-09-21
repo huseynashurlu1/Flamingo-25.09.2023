@@ -11,7 +11,7 @@ const Brands = () => {
 
     useEffect(() => {
       const getItems = async () => {
-        await axios.get(`http://localhost:5000/api/brand/all-brands`)
+        await axios.get(`http://207.154.192.155:5000/api/brand/all-brands`)
         .then(res => setData(res.data))
         .catch(err => console.log(err))
       }
@@ -21,7 +21,7 @@ const Brands = () => {
 
     const DeleteHandler = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:5000/api/brand/${id}`)
+            const response = await axios.delete(`http://207.154.192.155:5000/api/brand/${id}`)
             setData(prevData => prevData.filter(item => item._id !== id));
             toast.error('Brend silindi', {
                 position: "bottom-right",
