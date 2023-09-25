@@ -13,7 +13,7 @@ const ProductItem = (props) => {
                               {
                                 discount && <span>Endirimli</span>
                               }
-                                <img src={`http://localhost:5000/uploads/${image}`} alt="" />
+                                <img src={`https://flamingoapi.cscyber.site/uploads/${image}`} alt="" />
                               </div>
                               <div className="item-content">
                                 <h5>{name}</h5>

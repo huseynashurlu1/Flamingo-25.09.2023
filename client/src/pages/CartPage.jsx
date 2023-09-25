@@ -97,7 +97,7 @@ const CartPage = () => {
                                     return(
                                         <tr key={item._id}>
                                             <td>
-                                                <img style={{width:"50%"}} src={`http://localhost:5000/uploads/${item.image}`} alt="" />
+                                                <img style={{width:"50%"}} src={`https://flamingoapi.cscyber.site/uploads/${item.image}`} alt="" />
                                             </td>
                                             <td style={{width: "40%"}}>{item.name}</td>
                                             <td>{item.price}</td>

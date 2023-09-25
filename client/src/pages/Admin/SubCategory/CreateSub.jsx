@@ -15,7 +15,7 @@ const CreateSub = () => {
     const handleSubmit = async () => {
         console.log(item)
         try {
-            const response = await axios.post(`http://localhost:5000/api/category/${id}/add-subcategory`, item)
+            const response = await axios.post(`https://flamingoapi.cscyber.site/api/category/${id}/add-subcategory`, item)
             toast.success('Alt Kateqoriya əlavə olundu', {
                             position: "bottom-right",
                             autoClose: 2000,

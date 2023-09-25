@@ -33,7 +33,7 @@ const DetailPage = () => {
                 setData(res.data)
                 getSameItems(res.data.categoryId)
 
-                await axios.put(`http://localhost:5000/api/product/${id}/increase-view`);    
+                await axios.put(`https://flamingoapi.cscyber.site/api/product/${id}/increase-view`);    
                 await axios.put(`${apiUrl.productApi.increaseView}`);    
             } catch (error) {
                 console.log(error)
@@ -78,7 +78,7 @@ const DetailPage = () => {
                             {
                                 data.discount && <span>Endirimli</span>
                             }
-                            <img src={`http://localhost:5000/uploads/${data.image}`} alt="" />
+                            <img src={`https://flamingoapi.cscyber.site/uploads/${data.image}`} alt="" />
                         </div>
                     </div>
                     <div className="col-lg-6">
@@ -120,7 +120,7 @@ const DetailPage = () => {
                                             <div className="item-box">
                                             <div className="item-image">
                                                 {item.discount && <span>Endirimli</span>}
-                                                <img className='img-fluid' src={`http://localhost:5000/uploads/${item.image}`} alt="" />
+                                                <img className='img-fluid' src={`https://flamingoapi.cscyber.site/uploads/${item.image}`} alt="" />
                                             </div>
                                             <div className="item-content">
                                                 <h5>{item.name}</h5>

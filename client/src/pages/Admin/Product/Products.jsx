@@ -70,7 +70,7 @@ const Products = () => {
                             <tr style={{verticalAlign: "baseline"}} key={item._id}>
                                             <td style={{width: "30%"}}>{item._id}</td>
                                             <td style={{width:"30%"}}>
-                                                <img style={{width:"30%"}} src={`http://localhost:5000/uploads/${item.image}`} alt="" />
+                                                <img style={{width:"30%"}} src={`https://flamingoapi.cscyber.site/uploads/${item.image}`} alt="" />
                                             </td>
                                             <td style={{width: "30%"}}>{item.name}</td>
                                             <td style={{width: "10%"}}>{item.price} AZN</td>
