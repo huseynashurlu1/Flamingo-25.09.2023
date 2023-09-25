@@ -6,6 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import Slider from '../components/Slider'
 import Banners from '../components/Banners'
 import ProductItem from '../components/Product/ProductItem'
+import apiUrl from '../utils/api';
 
 
 const HomePage = () => {
@@ -13,7 +14,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const getItems = async () => {
-      await axios.get('http://207.154.192.155:5000/api/product/all-products')
+      await axios.get(apiUrl.productApi.getProducts)
       .then(res => {
         setData(res.data)
       })

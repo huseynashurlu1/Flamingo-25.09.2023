@@ -2,13 +2,14 @@ import { useEffect, useState } from "react"
 import axios from 'axios'
 import './category.css'
 import { Link } from "react-router-dom";
+import apiUrl from "../../utils/api";
 
 const Category = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
         const getDatas = async () => {
-            axios.get('http://207.154.192.155:5000/api/category/all-categories')
+            axios.get(apiUrl.categoryApi.getCategories)
             .then(res => setData(res.data.categories))
             .catch(err => console.log(err))
         }

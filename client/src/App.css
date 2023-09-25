@@ -54,3 +54,14 @@ body::-webkit-scrollbar-thumb{
 	  from{box-shadow: inset -3px 0px 0px #888;}
 	  to{box-shadow: inset -3px 0px 0px transparent;}
 }
+
+
+.alert {
+    width: 50%;
+}
+
+@media screen and (max-width:576px) {
+    .alert{
+        width: 90% !important;
+    }
+}

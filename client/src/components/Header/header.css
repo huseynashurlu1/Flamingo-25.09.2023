@@ -74,6 +74,10 @@ header .top p{
     border-radius: 50%;
 }
 
+.diversed{
+    font-family: Regular;
+}
+
 @media (max-width:576px) {
     .logo {
         text-align: center !important;
@@ -85,5 +89,11 @@ header .top p{
     .basket {
         text-align: center;
         margin-top: 15px;
+    }
+    .diversed{
+        font-size: 13px !important;
+    }
+    .category-list ul{
+        height: 180px !important;
     }
 }

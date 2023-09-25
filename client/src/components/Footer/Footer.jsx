@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './footer.css'
-import { AiOutlineInstagram, AiFillFacebook } from 'react-icons/ai'
+import { AiOutlineInstagram } from 'react-icons/ai'
 import { FormattedMessage } from "react-intl";
 
 const Footer = () => {

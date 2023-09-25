@@ -1,11 +1,10 @@
-import React from 'react'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BsTrash3 } from 'react-icons/bs'
-import { AiOutlineEdit } from 'react-icons/ai'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom'
+import apiUrl from '../../../utils/api'
 
 
 const Categories = () => {
@@ -13,7 +12,7 @@ const Categories = () => {
 
     useEffect(() => {
       const getItems = async () => {
-        await axios.get(`http://207.154.192.155:5000/api/category/all-categories`)
+        await axios.get(apiUrl.categoryApi.getCategories)
         .then(res => setData(res.data.categories))
         .catch(err => console.log(err))
       }
@@ -23,7 +22,7 @@ const Categories = () => {
   
     const DeleteHandler = async (id) => {
       try {
-          const response = await axios.delete(`http://207.154.192.155:5000/api/category/${id}`)
+          const response = await axios.delete(`${apiUrl.categoryApi.deleteCategory}/${id}`)
           setData(prevData => prevData.filter(item => item._id !== id));
           toast.error('Kateqoriya silindi', {
               position: "bottom-right",

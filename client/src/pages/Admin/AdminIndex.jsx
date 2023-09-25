@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import apiUrl from '../../utils/api'
 
 
 const AdminIndex = () => {
@@ -7,7 +8,7 @@ const AdminIndex = () => {
 
   useEffect(() => {
     const getDatas = async () => {
-      await axios.get('http://207.154.192.155:5000/api/statistics/all')
+      await axios.get(apiUrl.statisticsApi.getCounts)
       .then(res =>{
         setData(res.data)
         console.log(res.data);

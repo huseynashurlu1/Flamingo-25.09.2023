@@ -9,7 +9,6 @@ const brandRoute = require('./routes/brand')
 const orderRoute = require('./routes/order')
 const userRoute = require('./routes/user')
 const statRoute = require('./routes/statistics')
-const viewStats = require('./viewStats');
 const multer = require('multer');
 
 const dbConnect = require('./config/connection');
@@ -38,11 +37,6 @@ app.use('/api/user', userRoute);
 app.use('/api/statistics', statRoute);
 app.use('/uploads', express.static('uploads'))
 
-
-app.get('/', (req, res) => {
-    viewStats.artir();
-    res.send('Ana sayfa');
-  });
 
 
 app.listen(PORT, () => {

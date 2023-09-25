@@ -1,10 +1,11 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+ import { useParams } from 'react-router-dom'
 import '../assets/css/category.css';
 import AlertBox from '../components/AlertBox'
 import ProductItem from '../components/Product/ProductItem'
 import Spinner from '../components/Spinner';
+import apiUrl from '../utils/api';
 
 const CategoryPage = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const CategoryPage = () => {
 
   useEffect(() => {
     const getItems = async () => {
-      await axios.get(`http://207.154.192.155:5000/api/product/all-products/category/${id}`)
+      await axios.get(`${apiUrl.productApi.getProductByCategory}/${id}`)
       .then(res => {
         setData(res.data)
         const all_brands = [];
@@ -134,13 +135,13 @@ const CategoryPage = () => {
                filteredData.length > 0 ? (
                  filteredData.map(item => {
                    return(
-                     <ProductItem col='col-lg-4' item={item}/>
+                     <ProductItem key={item._id} col='col-lg-4' item={item}/>
                    )
                  })
                ) : (
                  data.map(item => {
                    return(
-                     <ProductItem col='col-lg-4' item={item}/>
+                     <ProductItem key={item._id} col='col-lg-4' item={item}/>
                    )
                  })
                )

@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom';
 import './header.css';
-import DropdownMenu from '../Dropdown';
-import { BsSearch } from 'react-icons/bs'
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { FormattedMessage } from "react-intl";
 import Dropdown from 'react-bootstrap/Dropdown';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
 const Navbar = (props) => {
@@ -30,7 +27,9 @@ const Navbar = (props) => {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-6 col-7">
-                            <FormattedMessage id="Ölkənin ən bol çeşidli mağazası" defaultMessage="Ölkənin ən bol çeşidli mağazası" />
+                            <span className='diversed'>
+                                <FormattedMessage id="Ölkənin ən bol çeşidli mağazası" defaultMessage="Ölkənin ən bol çeşidli mağazası" />
+                            </span>
                         </div>
                         <div className="col-lg-6 col-5">
                             <div className="lang text-end">
@@ -58,12 +57,6 @@ const Navbar = (props) => {
                             <Link to='/'>Flamingo</Link>
                         </div>
                     </div>
-                    {/* <div className="col-lg-7 col-12">
-                        <div className="search d-flex">
-                            <input type="text" placeholder='Məsələn, qazan'/>
-                            <button><BsSearch /></button>
-                        </div>
-                    </div> */}
                     <div className="col-lg-3 col-12 basket">
                         <Link to='/cart'>
                             <HiOutlineShoppingCart />
